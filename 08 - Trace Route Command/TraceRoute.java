@@ -1,6 +1,5 @@
 import java.io.*;
-import java.util.Date;
-class Ping {
+class TraceRoute {
 	public static void runSystemCommand(String command) {
 		try {
 			Process p = Runtime.getRuntime().exec(command);
@@ -14,8 +13,7 @@ class Ping {
 		}
 	}
 	public static void main(String args[]) {
-		String ip = "localhost";
-		runSystemCommand("ping " + ip);
-		System.out.println(new Date());
+		String ip = "www.facebook.com";
+		runSystemCommand("tracert " + ip);
 	}
 }
